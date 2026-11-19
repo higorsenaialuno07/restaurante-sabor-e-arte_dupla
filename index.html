@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sabor & Arte — Restaurante e Gastronomia</title>
+
+  <!-- Fontes Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS do Projeto -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO E MENU -->
+  <header class="topo">
+    <div class="container nav-flex">
+      <div class="logo">
+        <i class="fa-solid fa-hat-chef"></i>
+        <div>
+          <h1>Sabor & Arte</h1>
+          <span>Restaurante e Gastronomia</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li><a href="#inicio" class="ativo">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- BANNER CARROSSEL (INÍCIO) -->
+    <section id="inicio" class="carrossel">
+      <div class="slides">
+        <article class="slide ativo">
+          <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=1400&q=80" alt="Massa artesanal ao molho especial">
+          <div class="slide-overlay">
+            <div class="container slide-texto">
+              <h2>Gastronomia com Sabor e Arte</h2>
+              <p>Pratos especiais, ingredientes selecionados e uma experiência única.</p>
+              <a href="#cardapio" class="btn-laranja">Conheça nosso Cardápio &rsaquo;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1400&q=80" alt="Carnes grelhadas artesanais">
+          <div class="slide-overlay">
+            <div class="container slide-texto">
+              <h2>Receitas Artesanais de Família</h2>
+              <p>Tradição passada de geração em geração em cada detalhe.</p>
+              <a href="#sobre" class="btn-laranja">Nossa História &rsaquo;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80" alt="Salão acolhedor do restaurante Sabor & Arte">
+          <div class="slide-overlay">
+            <div class="container slide-texto">
+              <h2>Ambiente Acolhedor</h2>
+              <p>O espaço perfeito para reunir quem você ama.</p>
+              <a href="#contato" class="btn-laranja">Visite-nos &rsaquo;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="seta anterior" id="btnAnterior" aria-label="Slide anterior">&#10094;</button>
+      <button class="seta proximo" id="btnProximo" aria-label="Próximo slide">&#10095;</button>
+
+      <div class="indicadores">
+        <span class="ponto ativo" data-index="0"></span>
+        <span class="ponto" data-index="1"></span>
+        <span class="ponto" data-index="2"></span>
+      </div>
+    </section>
+
+    <!-- 3 CARDS INFORMATIVOS (DIFERENCIAIS DO RESTAURANTE) -->
+    <section class="diferenciais">
+      <div class="container grid-diferenciais">
+        <article class="diff-item">
+          <i class="fa-solid fa-leaf"></i>
+          <div>
+            <h3>Ingredientes Frescos</h3>
+            <p>Selecionados diariamente de produtores locais</p>
+          </div>
+        </article>
+
+        <article class="diff-item">
+          <i class="fa-solid fa-utensils"></i>
+          <div>
+            <h3>Atendimento Acolhedor</h3>
+            <p>Hospitalidade familiar em cada mesa</p>
+          </div>
+        </article>
+
+        <article class="diff-item">
+          <i class="fa-regular fa-star"></i>
+          <div>
+            <h3>Ambiente Aconchegante</h3>
+            <p>Ideal para família e amigos</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4 CARDS DE PRATOS (CARDÁPIO) + RECURSO JS "VER DESTAQUE DO DIA" -->
+    <section id="cardapio" class="secao-cardapio">
+      <div class="container">
+        <div class="titulo-secao">
+          <h2>Nosso Cardápio</h2>
+          <p>Destaques da Casa</p>
+          <div class="linha-laranja"></div>
+        </div>
+
+        <div class="grid-pratos">
+          <!-- Card 1: Grelhado -->
+          <article class="card-prato">
+            <img src="./img/picanha.png" alt="Picanha Grelhada" loading="lazy">
+            <div class="card-info">
+              <h3>Picanha Grelhada</h3>
+              <p>Corte nobre na brasa com arroz biro-biro e batatas rústicas.</p>
+              <span class="preco">R$ 89,90</span>
+            </div>
+          </article>
+
+          <!-- Card 2: Massa -->
+          <article class="card-prato">
+                  <img src="./img/macarrão.png" alt="Penne ao Molho Especial" loading="lazy">
+                  <div class="card-info">
+              <h3>Penne ao Molho Especial</h3>
+              <p>Massa artesanal ao molho pomodoro fresco e manjericão.</p>
+              <span class="preco">R$ 49,90</span>
+            </div>
+          </article>
+
+          <!-- Card 3: Sobremesa -->
+          <article class="card-prato">
+            <img src="./img/Petit Gateau.png" alt="Petit Gateau" loading="lazy">
+            <div class="card-info">
+              <h3>Petit Gateau</h3>
+              <p>Bolo quente de chocolate meio amargo com sorvete de creme.</p>
+              <span class="preco">R$ 29,90</span>
+            </div>
+          </article>
+
+          <!-- Card 4: Bebida -->
+          <article class="card-prato">
+            <img src="./img/Elixir de Frutas Vermelhas.png" alt="Elixir de Frutas Vermelhas" loading="lazy">
+            <div class="card-info">
+              <h3>Elixir de Frutas Vermelhas</h3>
+              <p>Bebida refrescante natural com morango, amora e hortelã.</p>
+              <span class="preco">R$ 16,90</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- RECURSO JS: VER DESTAQUE DO DIA -->
+        <div class="box-destaque-dia">
+          <button id="btnDestaque" class="btn-laranja">Ver destaque do dia</button>
+          <p id="textoDestaque" class="texto-destaque">Clique no botão acima para descobrir o prato recomendado pelo chef hoje!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A HISTÓRIA + VÍDEO INCORPORADO -->
+    <section id="sobre" class="secao-sobre-video">
+      <div class="container grid-sobre-video">
+        <div class="sobre-texto">
+          <h2>Nossa História</h2>
+          <div class="linha-laranja"></div>
+          <p>
+            O <strong>Sabor & Arte</strong> nasceu da paixão de nossa família pela culinária artesanal. 
+            Cada receita é preparada com tempo, carinho e ingredientes colhidos no ponto certo, 
+            resgatando o verdadeiro sabor da comida feita em casa.
+          </p>
+          <p>
+            Mais do que servir refeições, criamos memórias ao redor da mesa em um espaço rústico e acolhedor.
+          </p>
+        </div>
+
+        <div id="video" class="video-box">
+          <h2>Conheça o Sabor & Arte</h2>
+          <div class="video-responsivo">
+            <iframe 
+              src="https://www.youtube.com/embed/dA0VGEbbw4g" 
+              title="Vídeo institucional Sabor & Arte" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao-contato">
+      <div class="container contato-flex">
+        <div>
+          <h2>Visite-nos ou Entre em Contato</h2>
+          <p><i class="fa-solid fa-location-dot"></i> <strong>Cidade:</strong> Belo Horizonte — MG (Bairro Savassi)</p>
+          <p><i class="fa-regular fa-clock"></i> <strong>Horário de Funcionamento:</strong> Terça a Domingo, das 11h30 às 23h00</p>
+        </div>
+
+        <a href="https://wa.me/5531999999999" target="_blank" rel="noopener noreferrer" class="btn-laranja">
+          <i class="fa-brands fa-whatsapp"></i> Falar com o Restaurante
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <div class="container rodape-flex">
+      <div class="logo">
+        <i class="fa-solid fa-hat-chef"></i>
+        <div>
+          <strong>Sabor & Arte</strong>
+          <span>Restaurante e Gastronomia</span>
+        </div>
+      </div>
+
+      <div class="rodape-centro">
+        <ul class="menu-rodape">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <p>&copy; 2026 Sabor & Arte. Todos os direitos reservados.</p>
+      </div>
+
+      <div class="redes">
+        <a href="#contato" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#video" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#contato" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
